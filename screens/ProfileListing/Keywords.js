@@ -30,11 +30,23 @@ export const EditProfile = {
   location: 'location',
   place: 'Windsor, ON',
   save: 'Save',
+  listItem: 'List another item',
 };
 export const UpdatedProfile = {
   message: 'Message',
 };
 
-// export const AddedList={
-
-// }
+export const ListAdd = {
+  item: 'Item',
+  brand: 'Zara | S',
+  retail: 'Retail Price',
+  price: 'CA $250.00',
+  category: 'Category',
+  dress: 'Dress',
+  listing: 'Listing Price',
+  listingPrice: 'CA $35.00',
+  sell: 'Sell Price',
+  sellPrice: 'CA $90.00',
+  availability: 'Availability for lending',
+  lending: '4, 10, 30 days',
+};

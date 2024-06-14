@@ -1,8 +1,9 @@
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {Divider} from '@rneui/base';
-import {Profile, ProfileList, EditProfile} from './Keywords';
+import {Profile, ProfileList, EditProfile, ListAdd} from './Keywords';
 import {BackButton, RightIcon, ProfileIcon, AddListImg} from './ProfileImages';
+import AddedList from './index4';
 const AddList = () => {
   return (
     <>
@@ -14,22 +15,102 @@ const AddList = () => {
             Your listing has been successfully added! Here are the details:
           </Text>
         </View>
-        <View style={styles.detailContainer}>
-          <Text style={styles.listText}>Listing Details</Text>
-        </View>
-        <View style={styles.profileInnerSubContainer}>
-          <View style={styles.locationContainer}>
-            <View style={styles.locationFirstContainer}>
-              <Text style={styles.profileLocation}>{EditProfile.location}</Text>
-              <Text style={styles.profilePlace}>{EditProfile.place}</Text>
+        <View style={styles.listData}>
+          <View style={styles.detailContainer}>
+            <Text style={styles.listText}>Listing Details</Text>
+          </View>
+          <View style={styles.divider}>
+            <Divider
+              orientation="horizantal"
+              width={2}
+              color="rgba(230, 230, 230, 1)"
+              // insetType="middle"
+            />
+          </View>
+          <View style={styles.listContainer}>
+            <View style={styles.listItemContainer}>
+              <View style={styles.listFirstContainer}>
+                <Text style={styles.item}>{ListAdd.item}</Text>
+                <Text style={styles.brand}>{ListAdd.brand}</Text>
+              </View>
+              <View style={styles.listSecondContainer}>
+                <Image style={styles.listImg} source={AddListImg.listImg} />
+              </View>
             </View>
-            <View style={styles.locationSecondContainer}>
-              <Image style={styles.listImg} source={AddListImg.listImg} />
+          </View>
+
+          <View style={styles.divider}>
+            <Divider
+              orientation="horizantal"
+              width={2}
+              color="rgba(230, 230, 230, 1)"
+              // insetType="middle"
+            />
+          </View>
+          <View style={styles.retailContainer}>
+            <View style={styles.retailItemContainer}>
+              <View style={styles.retailFirstContainer}>
+                <Text style={styles.retailItem}>{ListAdd.retail}</Text>
+                <Text style={styles.retailBrand}>{ListAdd.price}</Text>
+              </View>
+              <View style={styles.categoryContainer}>
+                <Text style={styles.category}>{ListAdd.category}</Text>
+                <Text style={styles.dress}>{ListAdd.dress}</Text>
+              </View>
             </View>
+          </View>
+
+          <View style={styles.divider}>
+            <Divider
+              orientation="horizantal"
+              width={2}
+              color="rgba(230, 230, 230, 1)"
+              // insetType="middle"
+            />
+          </View>
+          <View style={styles.priceContainer}>
+            <View style={styles.priceItemContainer}>
+              <View style={styles.priceFirstContainer}>
+                <Text style={styles.priceItem}>{ListAdd.listing}</Text>
+                <Text style={styles.totalPrice}>{ListAdd.listingPrice}</Text>
+              </View>
+              <View style={styles.sellPriceContainer}>
+                <Text style={styles.sellItem}>{ListAdd.sell}</Text>
+                <Text style={styles.sellPrice}>{ListAdd.sellPrice}</Text>
+              </View>
+            </View>
+          </View>
+
+          <View style={styles.divider}>
+            <Divider
+              orientation="horizantal"
+              width={2}
+              color="rgba(230, 230, 230, 1)"
+              // insetType="middle"
+            />
+          </View>
+          <View style={styles.availableContainer}>
+            <View style={styles.availableItemContainer}>
+              <View style={styles.availabilityContainer}>
+                <Text style={styles.availibility}>{ListAdd.availability}</Text>
+                <Text style={styles.days}>{ListAdd.lending}</Text>
+              </View>
+            </View>
+          </View>
+          <View style={styles.divider}>
+            <Divider
+              orientation="horizantal"
+              width={2}
+              color="rgba(230, 230, 230, 1)"
+              // insetType="middle"
+            />
           </View>
         </View>
       </View>
       <View style={styles.saveButtonContainer}>
+        <TouchableOpacity style={styles.listButton}>
+          <Text style={styles.listButtonText}>{EditProfile.listItem}</Text>
+        </TouchableOpacity>
         <TouchableOpacity style={styles.saveButton}>
           <Text style={styles.saveButtonText}>{EditProfile.save}</Text>
         </TouchableOpacity>
@@ -48,7 +129,7 @@ const styles = StyleSheet.create({
     paddingTop: 40,
     alignItemsL: 'center',
     justifyContent: 'center',
-    backgroundColor: 'red',
+    // backgroundColor: 'red',
   },
   profileSubContainer: {
     width: 330,
@@ -57,7 +138,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'pink',
+    // backgroundColor: 'pink',
+  },
+  listData: {
+    width: 410,
+    // height: 164,
+    gap: 7,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: 'pink',
   },
   detailContainer: {
     width: 200,
@@ -66,7 +156,7 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'pink',
+    // backgroundColor: 'pink',
   },
   addedImage: {
     width: 80,
@@ -112,7 +202,17 @@ const styles = StyleSheet.create({
     // top: 15,
     // left: 15,
   },
-  profileInnerSubContainer: {
+  // list data
+  divider: {
+    width: 367,
+    // height: 70,
+    alignSelf: 'center',
+    right: 3,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'black',
+  },
+  listContainer: {
     // flexDirection: 'row',
     width: 410,
     gap: 10,
@@ -122,19 +222,32 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     // backgroundColor: 'orange',
   },
-  nameContainer: {
+
+  listItemContainer: {
+    flexDirection: 'row',
     width: 374,
-    height: 56,
+    height: 88,
     borderRadius: 4,
-    padding: 8,
+    // padding: 8,
     alignSelf: 'flex-start',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(230, 230, 230, 1)',
+    // backgroundColor: 'white',
   },
-  profileName: {
+  listFirstContainer: {
+    width: 180,
+    height: 86,
+    borderRadius: 4,
+    padding: 8,
+    gap: 4,
+    alignSelf: 'flex-start',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: 'green',
+  },
+  item: {
     color: 'rgba(84, 84, 84, 1)',
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: '700',
     lineHeight: 24,
     letterSpacing: 0.5,
@@ -142,7 +255,77 @@ const styles = StyleSheet.create({
     // top: 15,
     // left: 15,
   },
-  profilePerson: {
+  brand: {
+    color: 'rgba(51, 51, 51, 1)',
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 24,
+    letterSpacing: 0.5,
+    alignSelf: 'flex-start',
+    // top: 15,
+    // left: 15,
+  },
+  listSecondContainer: {
+    width: 180,
+    height: 86,
+    borderRadius: 4,
+    padding: 8,
+    alignSelf: 'flex-start',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: 'orange',
+  },
+  listImg: {
+    width: 72,
+    height: 72,
+    alignSelf: 'flex-end',
+  },
+  // 2nd
+
+  retailContainer: {
+    // flexDirection: 'row',
+    width: 410,
+    gap: 10,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    padding: 16,
+    alignItems: 'center',
+    // backgroundColor: 'orange',
+  },
+
+  retailItemContainer: {
+    flexDirection: 'row',
+    width: 374,
+    height: 52,
+    borderRadius: 4,
+    // padding: 8,
+    alignSelf: 'flex-start',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: 'white',
+  },
+  retailFirstContainer: {
+    width: 180,
+    height: 52,
+    borderRadius: 4,
+    padding: 8,
+    gap: 4,
+    alignSelf: 'flex-start',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: 'green',
+  },
+  retailItem: {
+    color: 'rgba(84, 84, 84, 1)',
+    fontSize: 16,
+    fontWeight: '700',
+    lineHeight: 24,
+    letterSpacing: 0.5,
+    alignSelf: 'flex-start',
+    // top: 15,
+    // left: 15,
+  },
+  retailBrand: {
     color: 'rgba(51, 51, 51, 1)',
     fontSize: 14,
     fontWeight: '400',
@@ -153,60 +336,76 @@ const styles = StyleSheet.create({
     // left: 15,
   },
 
-  bioContainer: {
-    width: 374,
-    height: 56,
-    padding: 8,
+  categoryContainer: {
+    width: 180,
+    height: 52,
     borderRadius: 4,
-    alignSelf: 'flex-start',
+    paddingLeft: 15,
+    gap: 4,
+    alignSelf: 'center',
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'rgba(230, 230, 230, 1)',
+    // alignItems: 'center',
+    // backgroundColor: 'orange',
   },
-  profileBio: {
+  category: {
     color: 'rgba(84, 84, 84, 1)',
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: '700',
     lineHeight: 24,
     letterSpacing: 0.5,
-    alignSelf: 'flex-start',
+    alignSelf: 'center',
     // top: 15,
     // left: 15,
   },
-  profileDescription: {
+  dress: {
     color: 'rgba(51, 51, 51, 1)',
     fontSize: 14,
     fontWeight: '400',
     lineHeight: 24,
     letterSpacing: 0.5,
-    alignSelf: 'flex-start',
+    alignSelf: 'center',
     // top: 15,
-    // left: 15,
+    right: 15,
   },
-  locationContainer: {
+
+  //3rd
+
+  priceContainer: {
+    // flexDirection: 'row',
+    width: 410,
+    gap: 10,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    padding: 16,
+    alignItems: 'center',
+    // backgroundColor: 'orange',
+  },
+
+  priceItemContainer: {
     flexDirection: 'row',
     width: 374,
-    height: 86,
+    height: 52,
     borderRadius: 4,
     // padding: 8,
     alignSelf: 'flex-start',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    // backgroundColor: 'white',
   },
-  locationFirstContainer: {
-    width: 330,
-    height: 56,
+  priceFirstContainer: {
+    width: 180,
+    height: 52,
     borderRadius: 4,
     padding: 8,
+    gap: 4,
     alignSelf: 'flex-start',
     justifyContent: 'center',
     alignItems: 'center',
     // backgroundColor: 'green',
   },
-  profileLocation: {
+  priceItem: {
     color: 'rgba(84, 84, 84, 1)',
-    fontSize: 12,
+    fontSize: 16,
     fontWeight: '700',
     lineHeight: 24,
     letterSpacing: 0.5,
@@ -214,7 +413,7 @@ const styles = StyleSheet.create({
     // top: 15,
     // left: 15,
   },
-  profilePlace: {
+  totalPrice: {
     color: 'rgba(51, 51, 51, 1)',
     fontSize: 14,
     fontWeight: '400',
@@ -224,31 +423,101 @@ const styles = StyleSheet.create({
     // top: 15,
     // left: 15,
   },
-  locationSecondContainer: {
+
+  sellPriceContainer: {
     width: 180,
-    height: 96,
+    height: 52,
     borderRadius: 4,
-    padding: 8,
+    paddingLeft: 15,
+    gap: 4,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    // alignItems: 'center',
+    // backgroundColor: 'orange',
+  },
+  sellItem: {
+    color: 'rgba(84, 84, 84, 1)',
+    fontSize: 16,
+    fontWeight: '700',
+    lineHeight: 24,
+    letterSpacing: 0.5,
+    alignSelf: 'center',
+    // top: 15,
+    // left: 15,
+  },
+  sellPrice: {
+    color: 'rgba(51, 51, 51, 1)',
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 24,
+    letterSpacing: 0.5,
+    alignSelf: 'center',
+    // top: 15,
+    // right: 15,
+  },
+
+  // 4th
+
+  availableContainer: {
+    // flexDirection: 'row',
+    width: 410,
+    gap: 10,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    padding: 16,
+    alignItems: 'center',
+    // backgroundColor: 'orange',
+  },
+
+  availableItemContainer: {
+    flexDirection: 'row',
+    width: 374,
+    height: 52,
+    borderRadius: 4,
+    // padding: 8,
     alignSelf: 'flex-start',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'orange',
+    // backgroundColor: 'white',
   },
-  listImg: {
-    // position: 'absolute',
-    width: 72,
-    height: 72,
+  availabilityContainer: {
+    width: 370,
+    height: 50,
+    borderRadius: 4,
+    padding: 13,
+    gap: 4,
     alignSelf: 'center',
-    // top: 56,
-    // right: 13,
-    // color: 'rgba(0, 0, 0, 1)',
+    justifyContent: 'center',
+    alignItems: 'center',
+    // backgroundColor: 'green',
   },
+  availibility: {
+    color: 'rgba(84, 84, 84, 1)',
+    fontSize: 16,
+    fontWeight: '700',
+    lineHeight: 24,
+    letterSpacing: 0.5,
+    alignSelf: 'flex-start',
+    // top: 15,
+    // left: 15,
+  },
+  days: {
+    color: 'rgba(51, 51, 51, 1)',
+    fontSize: 14,
+    fontWeight: '400',
+    lineHeight: 24,
+    letterSpacing: 0.5,
+    alignSelf: 'flex-start',
+    // top: 15,
+    // left: 15,
+  },
+
   saveButtonContainer: {
     position: 'absolute',
-    bottom: 0,
+    bottom: 10,
     width: 410,
-    height: 79,
-    gap: 25,
+    height: 110,
+    gap: 15,
     borderTopWidth: 1,
     borderColor: 'rgba(230, 230, 230, 1)',
     alignSelf: 'center',
@@ -277,18 +546,20 @@ const styles = StyleSheet.create({
     // left: 15,
   },
 
-  shareButton: {
-    width: 183,
-    height: 27,
-    borderRadius: 4,
+  listButton: {
+    width: 358,
+    height: 43,
+    borderRadius: 8,
     gap: 10,
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'rgba(8, 55, 107, 1)',
+    borderWidth: 1,
+    borderColor: 'rgba(8, 55, 107, 1)',
+    // backgroundColor: 'rgba(8, 55, 107, 1)',
   },
-  shareButtonText: {
-    color: 'rgba(255, 255, 255, 1)',
+  listButtonText: {
+    color: 'rgba(8, 55, 107, 1)',
     fontSize: 16,
     fontWeight: '700',
     lineHeight: 24,
