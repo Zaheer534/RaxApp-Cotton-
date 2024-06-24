@@ -372,7 +372,7 @@ const ListingForm = () => {
         </View>
         <View style={styles.saveButtonContainer}>
           <TouchableOpacity style={styles.saveButton}>
-            <Text style={styles.saveButtonText}>{EditProfile.save}</Text>
+            <Text style={styles.saveButtonText}>{EditProfile.listing}</Text>
           </TouchableOpacity>
         </View>
       </ScrollView>

@@ -32,6 +32,7 @@ export const EditProfile = {
   save: 'Save',
   listItem: 'List another item',
   bank: 'Connect bank account',
+  listing: 'Add listing',
 };
 export const UpdatedProfile = {
   message: 'Message',
