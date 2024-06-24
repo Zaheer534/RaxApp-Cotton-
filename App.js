@@ -11,6 +11,7 @@ import ProfileListings from './screens/ProfileListing/Index';
 import EditProfile from './screens/ProfileListing/index2';
 import ProfileListingsModified from './screens/ProfileListing/index3';
 import AddedList from './screens/ProfileListing/index4';
+import ListingForm from './screens/AddListing.js/ListingForm';
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
     // <ProfileListings />
     // <EditProfile />
     // <ProfileListingsModified />
-    <AddedList />
+    <ListingForm />
   );
 };
 
