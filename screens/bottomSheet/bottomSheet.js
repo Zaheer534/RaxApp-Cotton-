@@ -11,7 +11,7 @@ import {Divider} from '@rneui/themed';
 const Sheet = () => {
   return (
     <View style={{flex: 1}}>
-      <BottomSheet isOpen={true}>
+      <BottomSheet isOpen={true} sliderMaxHeight={'80%'}>
         <ScrollView>
           <View style={styles.resetPasswordContainer}>
             <Text style={styles.resetPasswordText}>Reset password</Text>
