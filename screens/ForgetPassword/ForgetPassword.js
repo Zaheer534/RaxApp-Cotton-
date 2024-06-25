@@ -21,10 +21,12 @@ const ForgetPassword = () => {
         setProgress={setProgress}
       />
       <View style={styles.middleContainer}>
-        {index === 1 && progress === 0.5 ? (
+        {index === 1 ? (
           <EmailComponent />
-        ) : index === 2 && progress === 0.5 ? (
+        ) : index === 2 ? (
           <PasswordResetComponent />
+        ) : index === 3 ? (
+          <DetailsComponent />
         ) : (
           <DetailsComponent />
         )}
