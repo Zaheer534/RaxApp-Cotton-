@@ -13,6 +13,7 @@ import ProfileListingsModified from './screens/ProfileListing/index3';
 import AddedList from './screens/ProfileListing/index4';
 import ListingForm from './screens/AddListing.js/ListingForm';
 import Sheet from './screens/bottomSheet/bottomSheet';
+import ForgetPasswordScreen from './screens/ForgetPassword/Index';
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
@@ -24,7 +25,7 @@ const App = () => {
     // <ProfileListings />
     // <EditProfile />
     // <ProfileListingsModified />
-    <Sheet />
+    <ForgetPasswordScreen />
   );
 };
 
