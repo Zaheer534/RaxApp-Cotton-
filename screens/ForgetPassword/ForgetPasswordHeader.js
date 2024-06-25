@@ -14,7 +14,7 @@ const ForgetPasswordHeaderComponent = props => {
     <View style={styles.editHeaderContainer}>
       <TouchableOpacity
         onPress={() => {
-          props.index < 0 && props.setIndex(props.index - 1);
+          props.index > 0 && props.setIndex(props.index - 1);
         }}>
         <Image style={styles.image} source={BackButton.back} />
       </TouchableOpacity>

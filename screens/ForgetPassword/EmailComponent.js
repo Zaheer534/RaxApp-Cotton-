@@ -13,7 +13,7 @@ const EmailComponent = () => {
   return (
     <View style={styles.emailContainer}>
       <View style={styles.emailTextContainer}>
-        <Text style={styles.headingText}>Email Address</Text>
+        <Text style={styles.headingText}>Email address</Text>
         <Text style={styles.detailText}>
           In order to rest your password, first we would need your email address{' '}
         </Text>
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '400',
     lineHeight: 24,
-    letterSpacing: 0.5,
+    letterSpacing: 0.8,
     color: 'rgba(51, 51, 51, 1)',
   },
   //second
@@ -71,9 +71,9 @@ const styles = StyleSheet.create({
   customSecondComponent: {
     flexDirection: 'row',
     width: 386,
-    height: 70,
+    height: 56,
     borderRadius: 4,
-    // paddingTop: 5,
+    // paddingTop: 8,
     alignSelf: 'center',
     justifyContent: 'center',
     alignItems: 'center',
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     // width: 304,
     // height: 70,
     borderRadius: 4,
-    paddingTop: 7,
+    paddingTop: 8,
     right: 10,
     alignSelf: 'flex-start',
     justifyContent: 'center',
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
     // position: 'absolute',
     width: 14.33,
     height: 12,
-    top: 3,
+    bottom: 4,
     left: 15,
     color: 'rgba(0, 0, 0, 1)',
   },
@@ -117,7 +117,6 @@ const styles = StyleSheet.create({
     alignSelf: 'flex-start',
     justifyContent: 'center',
     alignItems: 'center',
-    gap: 5,
     // backgroundColor: 'yellow',
   },
   customText: {
@@ -133,7 +132,7 @@ const styles = StyleSheet.create({
 
   customInputContainer: {
     width: 302,
-    height: 40,
+    height: 35,
     // padding: 8,
     right: 4,
     alignSelf: 'center',

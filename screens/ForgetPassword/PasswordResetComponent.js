@@ -19,11 +19,11 @@ const PasswordResetComponent = () => {
         </Text>
       </View>
       <View style={styles.customSecondComponent}>
-        <View style={styles.customItemContainer}>
+        <View style={[styles.customItemContainer, {paddingTop: 15}]}>
           <View style={styles.customThirdComponent}>
             <Text style={[styles.customText]}>New password</Text>
           </View>
-          <View style={[styles.customInputContainer]}>
+          <View style={[styles.customInputContainer, {bottom: 5, height: 35}]}>
             <TextInput
               style={styles.customInpuText}
               placeholder="Enter new password"
@@ -35,13 +35,16 @@ const PasswordResetComponent = () => {
         </TouchableOpacity>
       </View>
       <View style={styles.customSecondComponent}>
-        <View style={styles.customItemContainer}>
+        <View style={[styles.customItemContainer]}>
           {/* <View style={styles.customThirdComponent}>
             <Text style={[styles.customText]}>New password</Text>
           </View> */}
-          <View style={[styles.customInputContainer, {top: 8}]}>
+          <View style={[styles.customInputContainer, {top: 1}]}>
             <TextInput
-              style={[styles.customInpuText, {fontSize: 16}]}
+              style={[
+                styles.customInpuText,
+                {fontSize: 16, fontWeight: '400', top: 3},
+              ]}
               placeholder="Re-enter new password"
             />
           </View>
@@ -87,7 +90,7 @@ const styles = StyleSheet.create({
   customSecondComponent: {
     flexDirection: 'row',
     width: 386,
-    height: 70,
+    height: 56,
     borderRadius: 4,
     // paddingTop: 5,
     alignSelf: 'center',
@@ -102,7 +105,7 @@ const styles = StyleSheet.create({
     // width: 304,
     // height: 70,
     borderRadius: 4,
-    paddingTop: 7,
+    paddingTop: 8,
     right: 10,
     alignSelf: 'flex-start',
     justifyContent: 'center',
@@ -124,7 +127,7 @@ const styles = StyleSheet.create({
     // position: 'absolute',
     width: 14.33,
     height: 12,
-    top: 3,
+    bottom: 3,
     left: 15,
     color: 'rgba(0, 0, 0, 1)',
   },
@@ -149,7 +152,7 @@ const styles = StyleSheet.create({
 
   customInputContainer: {
     width: 302,
-    height: 40,
+    height: 37,
     // padding: 8,
     right: 4,
     alignSelf: 'center',
