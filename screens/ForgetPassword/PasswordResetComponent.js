@@ -34,11 +34,8 @@ const PasswordResetComponent = () => {
           <Image style={styles.eyeIcon} source={EyeIcon.eye} />
         </TouchableOpacity>
       </View>
-      <View style={styles.customSecondComponent}>
+      <View style={[styles.customSecondComponent, {bottom: 20}]}>
         <View style={[styles.customItemContainer]}>
-          {/* <View style={styles.customThirdComponent}>
-            <Text style={[styles.customText]}>New password</Text>
-          </View> */}
           <View style={[styles.customInputContainer, {top: 1}]}>
             <TextInput
               style={[
