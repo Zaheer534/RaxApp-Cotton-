@@ -11,9 +11,12 @@ export const dress = {
   sellerName: 'Adam Woods',
   cost: 'Cost',
   costAmount: '$ 40.00',
+  costShipAmount: '$ 40.00',
   buy: 'Buy Method',
   buyType: 'Local pick-up',
+  buyTypeShip: 'Local pick-up',
 };
+
 export const steps = {
   stepHeading: 'Next Steps',
   stepPoints:

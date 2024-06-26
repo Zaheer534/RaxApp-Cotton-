@@ -38,17 +38,17 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     flexDirection: 'row',
-    // alignItems: 'center',
-    // alignSelf: 'center',
-    justifyContent: 'space-evenly',
+    alignItems: 'flex-start',
+    alignSelf: 'center',
+    justifyContent: 'flex-start',
     backgroundColor: 'rgba(217, 217, 217, 1)',
     borderRadius: 10,
-    gap: 10,
+    gap: 5,
     marginTop: 10,
   },
   icons: {
-    width: 24,
-    height: 24,
+    width: 20,
+    height: 20,
     margin: 15,
   },
   additionalDescription: {
