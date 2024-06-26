@@ -1,17 +1,55 @@
-import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+  Linking,
+} from 'react-native';
 import React from 'react';
 import {BuyerImages} from './images';
+import {openLink} from './OpenSocialMediaLinks';
 
 const SocialLinkComponent = () => {
   return (
     <View style={styles.mainContainer}>
       <View style={styles.innerContainer}>
-        <Image source={BuyerImages.insta} style={styles.icons} />
-        <Image source={BuyerImages.linkedin} style={styles.icons} />
-        <Image source={BuyerImages.tiktok} style={styles.icons} />
-        <Image source={BuyerImages.playstore} style={styles.icons} />
-        <Image source={BuyerImages.apple} style={styles.icons} />
-        <Image source={BuyerImages.gmail} style={styles.icons} />
+        <TouchableOpacity
+          onPress={url => {
+            openLink('https://www.instagram.com/');
+          }}>
+          <Image source={BuyerImages.insta} style={styles.icons} />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={url => {
+            openLink('https://www.linkedin.com/feed/');
+          }}>
+          <Image source={BuyerImages.linkedin} style={styles.icons} />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={url => {
+            openLink('https://www.tiktok.com/explore');
+          }}>
+          <Image source={BuyerImages.tiktok} style={styles.icons} />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={url => {
+            openLink('https://play.google.com/store/games?hl=en');
+          }}>
+          <Image source={BuyerImages.playstore} style={styles.icons} />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={url => {
+            openLink('https://www.apple.com/');
+          }}>
+          <Image source={BuyerImages.apple} style={styles.icons} />
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={url => {
+            openLink('https://mail.google.com/mail/');
+          }}>
+          <Image source={BuyerImages.gmail} style={styles.icons} />
+        </TouchableOpacity>
       </View>
       <Text style={styles.additionalDescription}>
         Want to change how you receive these emails? You can update or
