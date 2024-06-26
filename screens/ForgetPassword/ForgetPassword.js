@@ -25,8 +25,6 @@ const ForgetPassword = () => {
           <EmailComponent />
         ) : index === 2 ? (
           <PasswordResetComponent />
-        ) : index === 3 ? (
-          <DetailsComponent />
         ) : (
           <DetailsComponent />
         )}
@@ -35,7 +33,7 @@ const ForgetPassword = () => {
         <TouchableOpacity
           style={styles.nextButton}
           onPress={() => {
-            index < 4 && setIndex(index + 1);
+            index < 3 && setIndex(index + 1);
             // index++;
           }}>
           <Text style={styles.nextButtonText}>Next</Text>
