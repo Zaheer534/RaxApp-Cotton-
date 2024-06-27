@@ -81,8 +81,8 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     backgroundColor: 'rgba(217, 217, 217, 1)',
     borderRadius: 10,
-    gap: 5,
-    marginTop: 10,
+    gap: 0,
+    marginTop: 5,
   },
   icons: {
     width: 20,

@@ -30,13 +30,16 @@ const styles = StyleSheet.create({
   productContainer: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginHorizontal: 15,
+    alignSelf: 'center',
+    // marginHorizontal: 1,
     // backgroundColor: 'green',
   },
   productDetailContainer: {
     alignItems: 'flex-start',
     alignSelf: 'flex-start',
-    marginTop: 8,
+    marginTop: 5,
+    marginLeft: 8,
+    // backgroundColor: 'pink',
   },
   productText: {
     fontSize: 13,
@@ -57,7 +60,7 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-end',
     marginTop: 8,
     padding: 10,
-    paddingLeft: 25,
+    paddingLeft: 20,
   },
   dressImage: {
     width: 155,
