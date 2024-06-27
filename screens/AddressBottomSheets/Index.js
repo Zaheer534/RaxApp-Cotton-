@@ -6,7 +6,7 @@ import ConfirmBottomSheet from './ConfirmBottomSheet';
 import UpdateBottomSheet from './UpdateBottomSheet';
 import AddressUpdatedBottomSheet from './AddressUpdatedBottomSheet';
 
-const BottomSheeIndex = ({navigation}) => {
+const BottomSheetIndex = ({navigation}) => {
   const refRBSheet = useRef();
   return (
     <View style={{flex: 0.3, justifyContent: 'center', gap: 10}}>
@@ -45,6 +45,6 @@ const BottomSheeIndex = ({navigation}) => {
   );
 };
 
-export default BottomSheeIndex;
+export default BottomSheetIndex;
 
 const styles = StyleSheet.create({});
