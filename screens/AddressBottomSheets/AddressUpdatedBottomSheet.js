@@ -16,7 +16,7 @@ const AddressUpdatedBottomSheet = ({navigation}) => {
         ref={refRBSheet}
         useNativeDriver={false}
         closeOnPressMask={true}
-        height={340}
+        height={360}
         closeOnDragDown={true}
         draggable={true}
         // draggableIcon={(onClose = () => refRBSheet.current.close())}
