@@ -12,6 +12,7 @@ import {color} from '@rneui/base';
 
 const BorrowThird = () => {
   const [selectedId, setSelectedId] = useState(false);
+  const [selected, setSelected] = useState('blue');
   const radioButtons = useMemo(
     () => [
       {

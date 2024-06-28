@@ -10,6 +10,7 @@ const BorrowSecond = () => {
         id: '1', // acts as primary key, should be unique and non-empty string
         label: 'Local pick-Up',
         color: 'rgba(8, 55, 107, 1)',
+
         borderSize: 3,
         containerStyle: {
           alignItems: 'flex-start',
