@@ -1,8 +1,16 @@
-import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  TouchableOpacity,
+  ScrollView,
+} from 'react-native';
 import React, {useState, useMemo} from 'react';
 import RadioGroup from 'react-native-radio-buttons-group';
+import {color} from '@rneui/base';
 
-const BorrowSecond = () => {
+const BorrowThird = () => {
   const [selectedId, setSelectedId] = useState(false);
   const radioButtons = useMemo(
     () => [
@@ -31,7 +39,6 @@ const BorrowSecond = () => {
         containerStyle: {
           alignItems: 'flex-start',
           alignSelf: 'flex-start',
-          //   marginRight: 35,
         },
         labelStyle: {
           fontSize: 14,
@@ -63,51 +70,77 @@ const BorrowSecond = () => {
   );
   return (
     <>
-      <View>
-        <View style={styles.signContainer}>
-          <Image
-            style={styles.signImage}
-            source={require('../../assets/Vector.png')}
-          />
-        </View>
-        <Text style={styles.addressText}>Address Update</Text>
-      </View>
-      <View style={styles.borrowDetailsContainer}>
-        <View style={styles.borrowDetails}>
-          <Text style={[styles.borrowText, {textAlign: 'center'}]}>
-            Review order request expires in 24:00:00
-          </Text>
-          <Text style={styles.borrowText}>
-            Your lender just updated the address on this borrow.{' '}
-          </Text>
-          <Text style={styles.borrowText}>Distance to new address </Text>
-          <Text style={styles.borrowSubText}>20 kms</Text>
-          <Text style={styles.borrowText}>Original method </Text>
-          <Text style={styles.borrowSubText}>Local pick-up</Text>
-        </View>
-        <View style={styles.methodContainer}>
-          <View style={styles.methodInnerContainer}>
-            <Text style={[styles.borrowText, {right: 10}]}>Borrow method </Text>
-            <View style={styles.radioContainer}>
-              <RadioGroup
-                radioButtons={radioButtons}
-                onPress={setSelectedId}
-                selectedId={selectedId}
-              />
-              {/* <Text>Local pick-Up</Text> */}
-            </View>
+      <ScrollView>
+        <View>
+          <View style={styles.signContainer}>
+            <Image
+              style={styles.signImage}
+              source={require('../../assets/Vector.png')}
+            />
           </View>
-
-          <TouchableOpacity style={styles.updateButton}>
-            <Text style={styles.updateButtonText}>Update</Text>
-          </TouchableOpacity>
+          <Text style={styles.addressText}>Address Update</Text>
         </View>
-      </View>
+        <View style={styles.borrowDetailsContainer}>
+          <View style={styles.borrowDetails}>
+            <Text style={[styles.borrowText, {textAlign: 'center'}]}>
+              Review order request expires in 24:00:00
+            </Text>
+            <Text style={styles.borrowText}>
+              Your lender just updated the address on this borrow.{' '}
+            </Text>
+            <Text style={styles.borrowText}>Distance to new address </Text>
+            <Text style={styles.borrowSubText}>20 kms</Text>
+            <Text style={styles.borrowText}>Original method </Text>
+            <Text style={styles.borrowSubText}>Local pick-up</Text>
+          </View>
+          <View style={styles.methodContainer}>
+            <View style={styles.methodInnerContainer}>
+              <Text style={[styles.borrowText, {right: 10}]}>
+                Borrow method{' '}
+              </Text>
+              <View style={styles.radioContainer}>
+                <RadioGroup
+                  radioButtons={radioButtons}
+                  onPress={setSelectedId}
+                  selectedId={selectedId}
+                />
+                {/* <Text>Local pick-Up</Text> */}
+              </View>
+            </View>
+            <View style={styles.costContainer}>
+              <Text style={[styles.borrowText, {right: 10}]}>
+                Estimated shipping cost{' '}
+              </Text>
+              <Text
+                style={[
+                  styles.borrowSubText,
+                  {right: 10, bottom: 8, fontSize: 14},
+                ]}>
+                CA $10.00
+              </Text>
+              <Text style={[styles.borrowText, {right: 10, bottom: 10}]}>
+                New total amount{' '}
+              </Text>
+              <Text
+                style={[
+                  styles.borrowSubText,
+                  {right: 10, bottom: 15, fontSize: 14},
+                ]}>
+                CA $45.00
+              </Text>
+            </View>
+
+            <TouchableOpacity style={styles.updateButton}>
+              <Text style={styles.updateButtonText}>Update</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </ScrollView>
     </>
   );
 };
 
-export default BorrowSecond;
+export default BorrowThird;
 
 const styles = StyleSheet.create({
   signContainer: {
@@ -131,10 +164,11 @@ const styles = StyleSheet.create({
     fontWeight: '700',
     textAlign: 'center',
     color: 'rgba(0, 0, 0, 1)',
+    bottom: 12,
   },
   borrowDetailsContainer: {
     // margin: 10,
-    marginTop: 15,
+    marginTop: 12,
     backgroundColor: 'rgba(255, 243, 176, 1)',
   },
   borrowDetails: {
@@ -144,7 +178,7 @@ const styles = StyleSheet.create({
   methodContainer: {
     alignItems: 'center',
     justifyContent: 'center',
-    gap: 10,
+    gap: 8,
     margin: 12,
     borderRadius: 8,
     backgroundColor: 'rgba(255, 255, 255, 1)',
@@ -155,7 +189,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     gap: 5,
     margin: 5,
-    // backgroundColor: 'green',
   },
   borrowText: {
     width: '90%',
@@ -173,7 +206,6 @@ const styles = StyleSheet.create({
   borrowSubText: {
     fontSize: 16,
     fontWeight: '400',
-    // textAlign: 'center',
     lineHeight: 24,
     letterSpacing: 0.5,
     padding: 5,
@@ -181,6 +213,11 @@ const styles = StyleSheet.create({
     color: 'rgba(0, 0, 0, 1)',
   },
 
+  costContainer: {
+    width: '88%',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+  },
   updateButton: {
     width: '85%',
     height: 43,

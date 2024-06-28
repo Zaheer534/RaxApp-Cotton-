@@ -18,6 +18,12 @@ const BorrowIndex = ({navigation}) => {
           navigation.navigate('BorrowSecond');
         }}
       />
+      <Button
+        title="Third Page"
+        onPress={() => {
+          navigation.navigate('BorrowThird');
+        }}
+      />
     </View>
   );
 };

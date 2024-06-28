@@ -20,6 +20,7 @@ import ConfirmAddress from './screens/AddressBottomSheets/ConfirmAddress';
 import BorrowIndex from './screens/BorrowAddress/Index';
 import BorrowAddress from './screens/BorrowAddress/BorrowAddress';
 import BorrowSecond from './screens/BorrowAddress/BorrowSecond';
+import BorrowThird from './screens/BorrowAddress/BorrowThird';
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
         <Stack.Screen name="Home" component={BorrowIndex} />
         <Stack.Screen name="Borrow" component={BorrowAddress} />
         <Stack.Screen name="BorrowSecond" component={BorrowSecond} />
+        <Stack.Screen name="BorrowThird" component={BorrowThird} />
       </Stack.Navigator>
     </NavigationContainer>
     // <ProfileListings />
