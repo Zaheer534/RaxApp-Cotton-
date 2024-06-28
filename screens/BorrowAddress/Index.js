@@ -5,7 +5,7 @@ import {Button} from '@rneui/base';
 
 const BorrowIndex = ({navigation}) => {
   return (
-    <View>
+    <View style={{gap: 10}}>
       <Button
         title="Go to Borrow Page"
         onPress={() => {
@@ -22,6 +22,18 @@ const BorrowIndex = ({navigation}) => {
         title="Third Page"
         onPress={() => {
           navigation.navigate('BorrowThird');
+        }}
+      />
+      <Button
+        title="Updated order"
+        onPress={() => {
+          navigation.navigate('UpdatedOrder');
+        }}
+      />
+      <Button
+        title="Cancelled order"
+        onPress={() => {
+          navigation.navigate('OrderCancel');
         }}
       />
     </View>

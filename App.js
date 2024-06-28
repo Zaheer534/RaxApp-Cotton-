@@ -21,6 +21,8 @@ import BorrowIndex from './screens/BorrowAddress/Index';
 import BorrowAddress from './screens/BorrowAddress/BorrowAddress';
 import BorrowSecond from './screens/BorrowAddress/BorrowSecond';
 import BorrowThird from './screens/BorrowAddress/BorrowThird';
+import OrderUpdate from './screens/BorrowAddress/OrderUpdate';
+import OrderCancel from './screens/BorrowAddress/OrderCancel';
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
@@ -30,6 +32,8 @@ const App = () => {
         <Stack.Screen name="Borrow" component={BorrowAddress} />
         <Stack.Screen name="BorrowSecond" component={BorrowSecond} />
         <Stack.Screen name="BorrowThird" component={BorrowThird} />
+        <Stack.Screen name="UpdatedOrder" component={OrderUpdate} />
+        <Stack.Screen name="OrderCancel" component={OrderCancel} />
       </Stack.Navigator>
     </NavigationContainer>
     // <ProfileListings />
