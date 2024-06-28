@@ -95,6 +95,7 @@ const ListingForm = () => {
                     style={{width: 360, height: 90}}
                     minimumValue={0}
                     maximumValue={1}
+                    step={0.5}
                     minimumTrackTintColor="#000000"
                     maximumTrackTintColor="#000000"
                     thumbTintColor="black"
@@ -115,6 +116,7 @@ const ListingForm = () => {
                     style={{width: 360, height: 90}}
                     minimumValue={0}
                     maximumValue={1}
+                    step={0.5}
                     minimumTrackTintColor="#000000"
                     maximumTrackTintColor="#000000"
                     thumbTintColor="black"
@@ -136,6 +138,7 @@ const ListingForm = () => {
                     style={{width: 360, height: 90}}
                     minimumValue={0}
                     maximumValue={1}
+                    step={0.5}
                     minimumTrackTintColor="#000000"
                     maximumTrackTintColor="#000000"
                     thumbTintColor="black"
