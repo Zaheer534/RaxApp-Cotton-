@@ -6,15 +6,42 @@ import {
   TouchableOpacity,
   ScrollView,
   TextInput,
+  ToastAndroid,
+  Alert,
 } from 'react-native';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Divider} from '@rneui/base';
 import {Profile, ProfileList, EditProfile, ListItems} from './Keywords';
 import {BackButton, RightIcon, ProfileIcon} from './ProfileImages';
 import Slider from '@react-native-community/slider';
 import CheckBox from '@react-native-community/checkbox';
+import Toast from 'react-native-toast-message';
+import {ToastProvider} from 'react-native-toast-notifications';
 const ListingForm = () => {
   const [isSelected, setSelection] = useState(false);
+  const [sliderState, setSliderState] = useState(0);
+  const fit = ['Tight selected', 'Perfect selected', 'Loose selected'];
+
+  function handleFit() {
+    // const sizeType= fitArray.length()
+    if (sliderState < 0.5) {
+      return 0;
+    } else if (sliderState == 0.5) {
+      return 1;
+    } else {
+      return 2;
+    }
+  }
+  useEffect(() => {
+    const showToast = () => {
+      Toast.show({
+        type: 'success',
+        text1: `${fit[sliderState]}`,
+      });
+    };
+    showToast();
+  }, [sliderState]);
+  console.log(sliderState);
   return (
     <>
       <ScrollView>
@@ -89,10 +116,14 @@ const ListingForm = () => {
               <View style={styles.sliderInnerContainer}>
                 <View style={styles.sliderHeading}>
                   <Text style={styles.headingText}>Fit</Text>
+
+                  <Text>{fit[handleFit(sliderState)]}</Text>
                 </View>
                 <View style={styles.slider}>
                   <Slider
                     style={{width: 360, height: 90}}
+                    value={sliderState}
+                    onValueChange={setSliderState}
                     minimumValue={0}
                     maximumValue={1}
                     step={0.5}

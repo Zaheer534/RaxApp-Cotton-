@@ -23,6 +23,7 @@ import BorrowSecond from './screens/BorrowAddress/BorrowSecond';
 import BorrowThird from './screens/BorrowAddress/BorrowThird';
 import OrderUpdate from './screens/BorrowAddress/OrderUpdate';
 import OrderCancel from './screens/BorrowAddress/OrderCancel';
+import AccountBottomSheet from './screens/bottomSheet/Index';
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
@@ -40,7 +41,7 @@ const App = () => {
     // <EditProfile />
     // <ProfileListingsModified />
     // <BuyerScreen />
-    <ListingForm />
+    <AccountBottomSheet />
   );
 };
 
