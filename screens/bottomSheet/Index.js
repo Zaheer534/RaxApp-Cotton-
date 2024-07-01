@@ -16,7 +16,7 @@ const AccountBottomSheet = () => {
         ref={refRBSheet}
         useNativeDriver={false}
         closeOnPressMask={true}
-        height={400}
+        height={370}
         closeOnDragDown={true}
         draggable={true}
         // draggableIcon={(onClose = () => refRBSheet.current.close())}
@@ -27,6 +27,10 @@ const AccountBottomSheet = () => {
           draggableIcon: {
             top: 12,
             backgroundColor: 'rgba(121, 116, 126, 1)',
+          },
+          container: {
+            borderTopLeftRadius: 8,
+            borderTopRightRadius: 8,
           },
         }}
         customModalProps={{

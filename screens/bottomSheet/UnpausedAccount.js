@@ -16,8 +16,7 @@ const UnpausedAccount = () => {
         style={{width: '93%', marginLeft: 10}}
         orientation="horizontal"
         width={1}
-        // color="rgba(230, 230, 230, 1)"
-        color="black"
+        color="rgba(230, 230, 230, 1)"
         inset={true}
         insetType="right"
       />

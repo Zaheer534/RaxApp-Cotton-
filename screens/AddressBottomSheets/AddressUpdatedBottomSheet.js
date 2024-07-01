@@ -24,6 +24,9 @@ const AddressUpdatedBottomSheet = ({navigation}) => {
           wrapper: {
             backgroundColor: 'transparent',
           },
+          container: {
+            backgroundColor: 'green',
+          },
           draggableIcon: {
             top: 12,
             backgroundColor: 'rgba(121, 116, 126, 1)',
